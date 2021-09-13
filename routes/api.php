@@ -24,6 +24,6 @@ Route::put("update",[App\Http\Controllers\CustomerController::class,'update']);
 Route::get("search/{name}",[App\Http\Controllers\CustomerController::class,'search']);
 Route::delete("delete/{id}",[App\Http\Controllers\CustomerController::class,'delete']);
 
-Route::apiResource("product",App\Http\Controllers\ProductController::class);
+Route::apiResource("product",App\Http\Controllers\ProductController::class)->except(['edit','create']);
 
 Route::post("upload",[App\Http\Controllers\FileController::class,'upload']);

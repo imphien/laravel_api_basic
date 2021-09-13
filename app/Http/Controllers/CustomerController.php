@@ -66,6 +66,5 @@ class CustomerController extends Controller
         {
             return ["Result"=>"Error"];
         }  
-
     }
 }
