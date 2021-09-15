@@ -108,4 +108,9 @@ class ProductController extends Controller
             return ["Result"=>"Error"];
         }  
     }
+
+    public function search($name)
+    {
+        return Product::where("name_product","like","%".$name."%")->get();
+    }
 }
